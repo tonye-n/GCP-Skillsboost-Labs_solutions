@@ -1,17 +1,16 @@
 
-
 <div align="center" style="padding: 25px; background: #f2f2f2; border-radius: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0px 0px 10px rgba(0,0,0,0.1);">
 
-<h1 style="color: #2F80ED;">🚀 Deploy a Hugo Website with Cloud Build and Firebase Pipeline | GSP747 </h1>
+<h1 style="color: #2F80ED;">🚀 Generate AI Images and Summarize them Using Gemini and Python </h1>
 
 
 <br/>
 
-<a href="https://www.cloudskillsboost.google/focuses/14353?parent=catalog" target="_blank" style="margin: 10px;">
+<a href="https://www.skills.google/games/7007/labs/43537" target="_blank" style="margin: 10px;">
   <img src="https://img.shields.io/badge/Access_Lab-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Access Lab">
 </a>
 
-<a href="https://youtu.be/oXPEH3r8jlk" target="_blank" style="margin: 10px;">
+<a href="https://youtu.be/A0eKvougZqU" target="_blank" style="margin: 10px;">
   <img src="https://img.shields.io/badge/Watch_Solution_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Solution Video">
 </a>
 
@@ -38,84 +37,27 @@ The goal is to enhance your learning experience — not bypass it.
 
 <div align="center" style="margin-top: 20px;">
 
+<!-- <a href="https://console.cloud.google.com/security/sensitive-data-protection/create/discoveryConfiguration;source=DATA_PROFILE_COVERAGE_DASHBOARD;discoveryType=4?project=" target="_blank" style="margin: 10px;">
+  <img src="https://img.shields.io/badge/Open_Sensitive_Data_Protection-00C9FF?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Open Sensitive Data Protection">
+</a> -->
+
+<!-- <a href="https://console.cloud.google.com/home/dashboard?project=&pli=1&cloudshell=true" target="_blank" style="margin: 10px;">
+  <img src="https://img.shields.io/badge/Launch_Cloud_Shell-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Launch Cloud Shell">
+</a> -->
 
 </div>
 
-<br/>
 
 
-
-<p align="center">
-  <img src="https://i.postimg.cc/1z2471v2/Screenshot-2024-06-30-at-1-46-19-AM.png" width="350"/>
-</p>
-
-
-## 📌 Task 1: Setup and Initialization  
-
-Download and execute the **Task 1 script**:  
+<h3>🚀 Setup Environment using Cloud Shell:</h3>
 
 ```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task1.sh
-
-source task1.sh
+curl -LO https://raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Generate%20AI%20Images%20and%20Summarize%20them%20Using%20Gemini%20and%20Python/quicklab.sh
+source quicklab.sh
 ```
 
-✅ After running, **check the score for Task 1** before moving forward.  
 
-
-
----
-
-## 📌 Task 2: Build and Configure  
-
-Download and execute the **Task 2 script**:  
-
-
-
-<p align="center">
-  <img src="https://github.com/quiccklabs/Labs_solutions/blob/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/firebase-setup.png" width="900" height="500"/>
-</p>
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task2.sh
-
-source task2.sh
-```
-
-✅ After running, **check the score for Task 2** before proceeding to the next step.  
-
-
-
----
-
-## 📌 Task 3: Deploy to Firebase  
-
-Download and execute the **Task 3 script**:  
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task3.sh
-
-source task3.sh
-```
-
-## 📌 Important NOTE  
-
-Execute the command below only in case of an error in **Task 3**. Otherwise, skip this step.  
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task4.sh
-
-source task4.sh
-```
-
----
-
-## 🎯 Final Notes  
-
-- Make sure to **run the scripts in order** (Task 1 → Task 2 → Task 3).  
-- After each task, **verify the score** before moving on.  
-- If any command fails, re-check the copied script URL.  
-
+<p style="font-size: 15px; color: #555;"><i>👉 This runs the script to set up your environment. It provisions resources and configures as needed.</i></p>
 
 
 

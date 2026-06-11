@@ -1,17 +1,15 @@
-
-
 <div align="center" style="padding: 25px; background: #f2f2f2; border-radius: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0px 0px 10px rgba(0,0,0,0.1);">
 
-<h1 style="color: #2F80ED;">🚀 Deploy a Hugo Website with Cloud Build and Firebase Pipeline | GSP747 </h1>
+<h1 style="color: #2F80ED;">🚀 Build an Application to Generate Text Embeddings with Gemini on Vertex AI </h1>
 
 
 <br/>
 
-<a href="https://www.cloudskillsboost.google/focuses/14353?parent=catalog" target="_blank" style="margin: 10px;">
+<a href="https://www.cloudskillsboost.google/focuses/1073?parent=catalog" target="_blank" style="margin: 10px;">
   <img src="https://img.shields.io/badge/Access_Lab-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Access Lab">
 </a>
 
-<a href="https://youtu.be/oXPEH3r8jlk" target="_blank" style="margin: 10px;">
+<a href="" target="_blank" style="margin: 10px;">
   <img src="https://img.shields.io/badge/Watch_Solution_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Solution Video">
 </a>
 
@@ -38,84 +36,82 @@ The goal is to enhance your learning experience — not bypass it.
 
 <div align="center" style="margin-top: 20px;">
 
+## 1️⃣ Create a new Python file
 
-</div>
+Name it:
 
-<br/>
-
-
-
-<p align="center">
-  <img src="https://i.postimg.cc/1z2471v2/Screenshot-2024-06-30-at-1-46-19-AM.png" width="350"/>
-</p>
-
-
-## 📌 Task 1: Setup and Initialization  
-
-Download and execute the **Task 1 script**:  
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task1.sh
-
-source task1.sh
 ```
-
-✅ After running, **check the score for Task 1** before moving forward.  
-
-
-
----
-
-## 📌 Task 2: Build and Configure  
-
-Download and execute the **Task 2 script**:  
-
-
-
-<p align="center">
-  <img src="https://github.com/quiccklabs/Labs_solutions/blob/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/firebase-setup.png" width="900" height="500"/>
-</p>
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task2.sh
-
-source task2.sh
-```
-
-✅ After running, **check the score for Task 2** before proceeding to the next step.  
-
-
-
----
-
-## 📌 Task 3: Deploy to Firebase  
-
-Download and execute the **Task 3 script**:  
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task3.sh
-
-source task3.sh
-```
-
-## 📌 Important NOTE  
-
-Execute the command below only in case of an error in **Task 3**. Otherwise, skip this step.  
-
-```bash
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/Deploy%20a%20Hugo%20Website%20with%20Cloud%20Build%20and%20Firebase%20Pipeline/task4.sh
-
-source task4.sh
+text_embedding.py
 ```
 
 ---
 
-## 🎯 Final Notes  
+## 2️⃣ Python code
 
-- Make sure to **run the scripts in order** (Task 1 → Task 2 → Task 3).  
-- After each task, **verify the score** before moving on.  
-- If any command fails, re-check the copied script URL.  
+```python
+import vertexai
+from vertexai.preview.language_models import TextEmbeddingModel
 
+
+def text_embedding(prompt: str):
+    """
+    Generates text embeddings using the text-embedding-005 model
+    and prints the embedding vector length.
+    """
+
+    # Initialize Vertex AI
+    vertexai.init(
+        project="YOUR_PROJECT_ID",     # replace with your GCP project ID
+        location="YOUR_LOCATION"
+    )
+
+    # Load the embedding model
+    model = TextEmbeddingModel.from_pretrained("text-embedding-005")
+
+    # Generate embeddings
+    embeddings = model.get_embeddings([prompt])
+
+    # Extract the vector
+    embedding_vector = embeddings[0].values
+
+    # Print results
+    print("Prompt:", prompt)
+    print("Embedding vector length:", len(embedding_vector))
+
+    return embedding_vector
+
+
+if __name__ == "__main__":
+    sample_text = "Natural Language Processing enables machines to understand human language."
+    text_embedding(sample_text)
+```
+
+---
+
+## 3️⃣ Save the file
+
+Ensure the file is saved as:
+
+```
+text_embedding.py
+```
+
+---
+
+## 4️⃣ Run the script
+
+```bash
+/usr/bin/python3 /text_embedding.py
+```
+
+---
+
+## ✅ Expected Output
+
+```
+Prompt: Natural Language Processing enables machines to understand human language.
+Embedding vector length: 768
+```
 
 
 
